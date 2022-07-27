@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+padding: 0;
+font-family: 'Varela', sans-serif
+}
+body{
+   background-color: teal; 
+}
+#container{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+.dice{
+    text-align: center;
+    display: inline-block;
+}
+h2{
+    margin:30px;
+    text-shadow: 5px 0 white;
+    font-size: 6rem;
+    color:orangered
+}
+p{
+    color: antiquewhite;
+    font-size: 3rem;
+    text-shadow: 1px 1px white;
+
+}
+button{
+    padding: 10px;
+    background-color:yellow;
+    color: black;
+    border: none;
+
+}
+img{
+    width: 70%;
+}

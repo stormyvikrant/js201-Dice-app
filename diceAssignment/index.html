@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice assignment</title>
+<link rel="stylesheet"  href="index.css" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,100;1,200;1,300;1,400&family=Lora:ital,wght@0,500;0,600;1,400&family=Varela&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id ="container">
+<h2>Dice-game</h2>
+<h1>winner:</h1>
+<div class="dice">
+    <p>player-A</p>
+    <img src="images/dice1.png" id="playercheck1"/>
+</div>
+<div class="dice">
+    <p>player-B</p>
+    <img src="images/dice2.png" id="playercheck2"/>
+</div>
+<div class="dice">
+    <p>player-C</p>
+    <img src="images/dice5.png" id="playercheck3"/>
+</div>
+<div>
+    <button onclick="clickbutton()" >Click me</button>
+</div>
+    </div>
+    <script>
+      
+        function clickbutton(){
+
+              //first player
+           const play1=Math.floor(Math.random()*6)+1
+            const play1dice=`images/dice${play1}.png`;
+        document.getElementById('playercheck1').setAttribute('src',play1dice)
+       //second player
+        const play2=Math.floor(Math.random()*6)+1
+
+            const play2dice=`images/dice${play2}.png`;
+        document.getElementById('playercheck2').setAttribute('src',play2dice) 
+        
+     //second player
+     const play3=Math.floor(Math.random()*6)+1
+            const play3dice=`images/dice${play3}.png`;
+        document.getElementById('playercheck3').setAttribute('src',play3dice) 
+    
+    //conditon winner
+
+    if(play1 > play2 && play1> play3){
+   document.querySelector('h1').innerHTML="winner is: player1 won "
+}
+else if(play2> play3 && play2> play1){
+   document.querySelector('h1').innerHTML="winner is: player2 won "
+}
+else if(play3>play2 && play3>play1){
+   document.querySelector('h1').innerHTML="winner is: player3 won "
+}
+else if(play1==play2||play1==play3|| play2==play3||play1==play2==play3){
+    document.querySelector('h1').innerHTML="Draw match  "
+}
+
+
+    } 
+
+   
+
+
+       </script>
+</body>
+</html>
+
+
+<!-- //heading -->
